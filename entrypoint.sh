@@ -8,9 +8,9 @@ git config --global merge.ours.name = "Keep ours merge"
 git config --global merge.ours.driver "true"
 # git config -l
 # git switch master
-# git fetch
+git fetch
 
-BRANCHES=`git branch -r` # for main
+BRANCHES=`git branch` # for main
 # BRANCHES='origin/master origin/php/php' # for develop
 BRANCHES_LENGTH=`echo "$BRANCH " | tr ' ' '\n' | wc -l`
 for i in `seq $BRANCHES_LENGTH`

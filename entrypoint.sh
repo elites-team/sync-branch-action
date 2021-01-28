@@ -9,5 +9,6 @@ git config --global merge.ours.driver "true"
 git config -l
 # git checkout master
 git branch -r
-branches=$(git branch | grep -v '* master')
+branches=$(git branch -r)
 echo ${branches[@]}
+echo ${#branches[@]}

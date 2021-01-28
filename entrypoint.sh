@@ -7,4 +7,5 @@ git config --global user.name "github-actions[bot]"
 git config --global merge.ours.name = "Keep ours merge"
 git config --global merge.ours.driver "true"
 git config -l
-git branch | xargs -p -I {} git switch {}
+git switch master
+git branch | grep -v '* master' | xargs -p -I {} git switch {}

@@ -11,7 +11,7 @@ git config --global merge.ours.driver "true"
 # git branch
 
 BRANCHES=`git branch` # for main
-BRANCHES='master php/php' # for develop
+# BRANCHES='master php/php' # for develop
 echo $BRANCHES
 BRANCHES_LENGTH=`echo "$BRANCH " | tr ' ' '\n' | wc -l`
 echo $BRANCHES_LENGTH

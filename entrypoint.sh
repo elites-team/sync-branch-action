@@ -9,7 +9,9 @@ git config --global merge.ours.driver "true"
 git config -l
 # git checkout master
 git branch -r
+echo "----- branches=$(git branch -r) -----------"
 branches=$(git branch -r)
+echo "----- echo $(branches[@]) --------------"
 echo $(branches[@])
 for branch in ${branches[@]}; do
   echo branch

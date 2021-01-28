@@ -1,0 +1,12 @@
+name: "elites-team/git-subtree"
+description: "Sync a sub-directory from a parent repo to a child repository (git subtree.)"
+inputs:
+  matrix:
+    description: '[{"path":"subtree/to/path","repo":"owner/repository","branch":"ref/heads/master"}]'
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: share-2
+  color: blue

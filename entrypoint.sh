@@ -16,7 +16,7 @@ BRANCHES_LENGTH=`echo "$BRANCH " | tr ' ' '\n' | wc -l`
 for i in `seq $BRANCHES_LENGTH`
 do
   R_BRANCH=`echo $BRANCHES | cut -d ' ' -f $i`
-  BRANCH=`echo $BRANCHES | cut -d ' ' -f $i` | tr 'origin/'
+  BRANCH=`echo $BRANCHES | cut -d ' ' -f $i` | tr 'origin/' ''
   echo "$R_BRANCH"
   echo "$BRANCH"
 done

@@ -9,13 +9,15 @@ git config --global merge.ours.driver "true"
 # git config -l
 git switch master
 
-BRANCHES=`git branch | tr -d '*' | sed 's/^  *//g'`
+BRANCHES=`git branch | tr -d '*' | sed 's/^  *//g'` 
 BRANCHES_LENGTH=`git branch | tr -d '*' | sed 's/^  *//g' | wc -l`
 echo "*** loop start ***"
 for i in `seq $BRANCHES_LENGTH`
-
 do
   BRANCH=`echo $BRANCHES | cut -d ' ' -f $i`
-  echo "$BRANCH"
-  # git switch "$BRANCH"
+  # echo "*** check point ***"
+  if [ $BRANCH != 'master' -a $BRANCH != 'action' ]; then
+    # echo $BRANCH
+    git switch "${BRANCH}"
+  fi
 done

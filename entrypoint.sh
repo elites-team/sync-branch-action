@@ -6,7 +6,7 @@ git config --global user.email "$GITHUB_RUN_NUMBER+github-actions[bot]@users.nor
 git config --global user.name "github-actions[bot]"
 git config --global merge.ours.name = "Keep ours merge"
 git config --global merge.ours.driver "true"
-git config -l
+# git config -l
 # git switch master
 # git fetch
 
@@ -16,7 +16,7 @@ BRANCHES_LENGTH=`echo "$BRANCH " | tr ' ' '\n' | wc -l`
 for i in `seq $BRANCHES_LENGTH`
 do
   R_BRANCH=`echo $BRANCHES | cut -d ' ' -f $i`
-  BRANCH=`echo $BRANCHES | cut -d ' ' -f $i` | tr 'origin/' ''
   echo "$R_BRANCH"
+  BRANCH=`echo $R_BRANCHES | tr 'origin/'
   echo "$BRANCH"
 done

@@ -10,7 +10,7 @@ git config -l
 # git checkout master
 git branch -r
 branches=$(git branch -r)
-echo ${branches[@]}
+echo $(branches[@])
 for branch in ${branches[@]}; do
   echo branch
 done

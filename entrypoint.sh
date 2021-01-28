@@ -19,4 +19,5 @@ do
   echo "$R_BRANCH"
   BRANCH=`echo $R_BRANCHES | tr 'origin/'`
   echo "$BRANCH"
+  git switch "$BRANCH"
 done

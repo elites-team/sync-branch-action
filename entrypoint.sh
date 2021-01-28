@@ -8,6 +8,7 @@ git config --global merge.ours.name = "Keep ours merge"
 git config --global merge.ours.driver "true"
 # git config -l
 # git switch master
+git branch
 
 BRANCHES=`git branch` # for main
 # BRANCHES='master php/php' # for develop

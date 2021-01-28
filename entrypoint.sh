@@ -8,6 +8,6 @@ git config --global merge.ours.name = "Keep ours merge"
 git config --global merge.ours.driver "true"
 # git config -l
 git checkout master
-
+git fetch
 branches=$(git branch | grep -v '* master')
 echo ${branches[@]}

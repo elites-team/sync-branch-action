@@ -16,5 +16,5 @@ for i in `seq $BRANCHES_LENGTH`
 do
   BRANCH=`echo $BRANCHES | cut -d ' ' -f $i`
   echo "$BRANCH"
-  git switch "$R_BRANCH"
+  git switch "$BRANCH"
 done

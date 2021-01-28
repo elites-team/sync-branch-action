@@ -7,16 +7,13 @@ git config --global user.name "github-actions[bot]"
 git config --global merge.ours.name = "Keep ours merge"
 git config --global merge.ours.driver "true"
 # git config -l
-# git switch master
-# git branch
+git switch master
 
-BRANCHES=`git branch` # for main
-# BRANCHES='master php/php' # for develop
-echo $BRANCHES
-BRANCHES_LENGTH=`echo "$BRANCH " | tr ' ' '\n' | wc -l`
-echo $BRANCHES_LENGTH
+BRANCHES=`git branch | tr -d '*' | sed 's/^  *//g'`
+BRANCHES_LENGTH=`git branch | tr -d '*' | sed 's/^  *//g' | wc -l`
 echo "*** loop start ***"
 for i in `seq $BRANCHES_LENGTH`
+
 do
   BRANCH=`echo $BRANCHES | cut -d ' ' -f $i`
   echo "$BRANCH"
